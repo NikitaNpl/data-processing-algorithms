@@ -13,13 +13,14 @@ class HashTableLinearProbing {
 		
 	public:
 		HashTableLinearProbing();
-		size_t hash(const char* str);
+		size_t hash(std::string str);
 		void checkCapacity();
 		bool insertNode(std::string key, std::string value);
-		HashNode* findNode(std::string key);
-		bool deleteNode(std::string key);
+		HashNode* findNode(std::string key, std::string value);
+		bool deleteNode(std::string key, std::string value);
 		size_t sizeOf();
 		void display();
+		void autoFill();
 };
 
 #endif // !HashTableLinearProbing_H
